@@ -24,9 +24,9 @@ main {
     flex-direction: column;
     width: 15.6rem;
     height: 24.2rem;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 0.6em;
-    box-shadow: 0 0.5rem 1.5rem 0.2rem rgba(76, 76, 122, 0.13);
+    box-shadow: 0 0.5rem 1.5rem 0.2rem rgba(76, 76, 122, 0.2);
 
 }
 h1 {
@@ -82,19 +82,20 @@ p {
     box-sizing: content-box;
     background-color:#ecf2f8;
     border-radius: 2rem;
+    fill: #ffffff;
 }
 
 #share {
     visibility: hidden;
 }
-#share.open {
+#share.visible {
     visibility: visible;
     display: flex;
     width: 15.6rem;
     height: 3.5rem;
     padding: 1.5rem;
     background-color: hsl(217, 19%, 35%);
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 500;
     letter-spacing: 0.4em;
     margin-left: -1.5rem;
@@ -102,16 +103,71 @@ p {
     border-bottom-left-radius: 0.6em;
     border-bottom-right-radius: 0.6em;
     align-items: center;
-    color: #ecf2f8;
+    color: #9eafc2;
 }
 
-.social {
+.socials {
     width: 0.9rem;
     height: 0.9rem;
-    margin-left: 1.5em;
+    margin-left: 1.2em;
 }
 
 @media (min-width: 768px ) {
 
-    
+    main {
+    display: flex;
+    flex-direction: row;
+    width: 34.5rem;
+    height: 13rem;
+    }
+    h1{
+        font-size: 1.13em;
+    }
+    .drawer {
+    width: 14.5rem;
+    height: 13rem;
+    border-top-left-radius: 0.6em;
+    border-bottom-left-radius: 0.6em;
+    border-top-right-radius: 0;
+    }
+    .down-content{
+        padding-top: 1rem;
+    }
+    #share.visible {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    width: 8rem;
+    height: 1.7rem;
+    padding: 1rem;
+    justify-content: center;
+    background-color: #48556a;
+    font-size: 0.6em;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    margin-top: -5rem;
+    margin-right: -3rem;
+    border-radius: 0.6em;
+    align-items: center;
+    color: #9eafc2;
+    justify-self: end;
+    }
+    #share::before{
+        content: "";
+        position: absolute;
+        width:0;
+        height:0;
+        border-left:0.8rem solid transparent;
+        border-right: 0.8rem solid transparent;
+        border-top: 1rem solid #48556a;
+        margin-top:2.5rem;
+    }
+    .socials {
+    width: 0.7rem;
+    height: 0.7rem;
+    margin-left: 1.2em;
+    }
+    #profile.hidden {
+    visibility: visible;
+}
 }
