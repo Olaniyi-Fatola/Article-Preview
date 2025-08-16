@@ -1,11 +1,10 @@
-var share = document.getElementById("share")
-var social = document.getElementById("social")
-var button = document.getElementById("share-icon")
-var profile = document.getElementById("profile")
+let share = document.getElementById("share")
+let button = document.getElementById("share-icon")
+let profile = document.getElementById("profile")
 
 button.onclick = function(){
 
-    if (share.className=="visible"){
+    if (share.className==="visible"){
         //social media button disappear
         share.className="";
         profile.className="";

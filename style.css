@@ -112,7 +112,7 @@ p {
     margin-left: 1.2em;
 }
 
-@media (min-width: 768px ) {
+@media (min-width: 48rem ) {
 
     main {
     display: flex;
